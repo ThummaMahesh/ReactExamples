@@ -1,0 +1,10 @@
+.register-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+}
+
+.register-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+}

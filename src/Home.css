@@ -1,0 +1,8 @@
+/* Limit carousel image height */
+.carousel-item img {
+  max-height: 400px;   /* adjust height as needed */
+  object-fit: cover;   /* crop image nicely */
+  border-radius: 10px; /* rounded corners */
+  max-width : 500px;
+  margin:auto;
+}
