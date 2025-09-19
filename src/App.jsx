@@ -5,12 +5,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // ✅ Bootstrap JS (with Popper)
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import Home from './Home';
 import Contact from './Contact';
 import Milk from './Milk';
 import Cart from './Cart';
 import Veg from './Veg';
+import Icecreams from './icecreams';  
 import Sweets from './Sweets';
 import Orders from './OrdersHistory';
 import PageNotFound from './PageNotFound';
@@ -19,16 +21,19 @@ import Wishlist from './Wishlist';
 import Medicine from './Medicine';
 import Signin from './Signin';
 import Register from './Register';
+import Header from './header';
+import Footer from './footer';
+import Drinks from './drinks';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"; // import default styling
 
 import { useSelector } from 'react-redux';
-import { useRef, useCallback } from 'react'; // ✅ from react (not react-redux)
+import { useRef, useCallback } from 'react';
+ // ✅ from react (not react-redux)
 
 function App() {
-  const totalQuantity = useSelector(
-    (state) => state.Cart.reduce((sum, item) => sum + item.quantity, 0)
-  );
+  const totalQuantity = useSelector((state) => state.Cart.reduce((total, item) => total + item.quantity, 0 ));
+  const wishhlistCount=useSelector((state) => state.wishlist.length);
 
   // 🔑 Ref points to the collapsible <div id="navbarNav">
   const collapseRef = useRef(null);
@@ -47,6 +52,7 @@ function App() {
     <>
       <ToastContainer theme='dark' position='top-right' autoClose={3000} hideProgressBar={false} newestOnTop={false} closeOnClick={true} rtl={false} pauseOnFocusLoss={true} draggable={true} pauseOnHover={true} />
     <BrowserRouter>
+    <Header cartCount={totalQuantity} wishlistCount={wishhlistCount}/>
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm custom-navbar px-2">
         <div className="container-fluid px-3">
           <NavLink className="navbar-brand d-flex align-items-center" to="/" onClick={handleNavClick}>
@@ -86,12 +92,23 @@ function App() {
               </li>
               <li className="nav-item">
                 <NavLink to="/milk" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} onClick={handleNavClick}>
-                  <i className="bi bi-cup-straw me-1"></i> Milk
+                  <i className="bi bi-cup-hot-fill me-1"></i> Milk
                 </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink to="/veg" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} onClick={handleNavClick}>
                   <i className="bi bi-basket-fill me-1"></i> Veg
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/drinks" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} onClick={handleNavClick}>
+                 <i className="bi bi-cup-straw me-1"></i> Drinks
+                </NavLink>
+              </li>
+              <li className="nav-item">
+                <NavLink to="/icecreams" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} onClick={handleNavClick}>
+                 <i className="bi bi-ice-cream me-1">🍦</i> Ice Creams
+
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -110,17 +127,14 @@ function App() {
                 </NavLink>
               </li>
              
-              <li className="nav-item">
-                <NavLink to="/signin" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} onClick={handleNavClick}>
-                  <i className="bi bi-box-arrow-in-right me-1"></i> SignIn
-                </NavLink>
-              </li>
+              
                <li className="nav-item">
                 <NavLink to="/orders" className={({ isActive }) => "nav-link" + (isActive ? " active" : "")} onClick={handleNavClick}>
                   <i className="bi bi-card-checklist me-1"></i> Orders
                 </NavLink>
               </li>
             </ul>
+            
 
             {/* Right links */}
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -149,13 +163,16 @@ function App() {
         <Route path="/nonveg" element={<Nonveg />} />
         <Route path="/sweets" element={<Sweets />} />
         <Route path="/medicine" element={<Medicine />} />
-        <Route path="/signin" element={<Signin />} />
+        <Route path="/login" element={<Signin />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/wishlist" element={<Wishlist />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="*" element={<PageNotFound />} />
         <Route path="/register" element={<Register />} />
+         <Route path="/*" element={<PageNotFound />} />
+         <Route path="/drinks" element={<Drinks />} />
+         <Route path="/icecreams" element={<Icecreams />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
     </>
   );

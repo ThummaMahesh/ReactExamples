@@ -43,29 +43,6 @@ function AboutUs() {
         </p>
       </div>
 
-      {/* Values / Why Choose Us */}
-      <div className="row mb-5">
-        <h2 className="fw-bold text-success text-center mb-4">💡 Why Choose Us?</h2>
-        <div className="col-md-4 text-center">
-          <h5 className="fw-bold">⏱️ Fast Delivery</h5>
-          <p className="text-muted">
-            Get essentials delivered quickly and reliably to your doorstep.
-          </p>
-        </div>
-        <div className="col-md-4 text-center">
-          <h5 className="fw-bold">🥬 Fresh & Quality</h5>
-          <p className="text-muted">
-            We partner directly with farmers and trusted suppliers for quality.
-          </p>
-        </div>
-        <div className="col-md-4 text-center">
-          <h5 className="fw-bold">📞 Customer Support</h5>
-          <p className="text-muted">
-            Our team is always here to assist you with your needs and queries.
-          </p>
-        </div>
-      </div>
-
       {/* Categories Section */}
       <div className="text-center mb-5">
         <h2 className="fw-bold text-warning">🛒 What We Offer</h2>

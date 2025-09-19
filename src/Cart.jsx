@@ -63,8 +63,9 @@ function Cart() {
   }
 
 
-    const handlecheckout = () =>{
+    const handlecheckout = () => {
     if(!user.authenticated){
+      console.log("hello i am checkout");
       navigate('/signin');
     }
     else{
@@ -132,6 +133,7 @@ function Cart() {
   // ✅ Coupon apply
   const handleApplyCoupon = () => {
     const result = getCouponDiscount(cuponCode, totalAmount);
+    console.log(cuponCode);
     setCouponCodeResult(result);
     if (result.isValid) {
       setAppliedCoupon(cuponCode);
@@ -285,6 +287,7 @@ function Cart() {
             </div>
 
             {/* Coupon Input */}
+ 
             <div className="d-flex mb-3">
               <input
                 type="text"
@@ -293,8 +296,8 @@ function Cart() {
                 placeholder="Enter coupon code"
                 className={`form-control me-2 ${errorMsg ? "is-invalid" : ""}`}
               />
-              <button onClk={handleApplyCoupon} className="btn btn-success">
-                Applyic
+              <button onClick={handleApplyCoupon} className="btn btn-success">
+                Apply
               </button>
             </div>
             {errorMsg && (

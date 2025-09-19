@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom"; // ✅ Import Link
 import { loginUser } from "./store";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
 
 function SignIn() {
   const dispatch = useDispatch();
@@ -10,7 +11,8 @@ function SignIn() {
   const passwordRef = useRef(null);
   const [errors, setErrors] = useState({ username: "", password: "" });
   const navigate = useNavigate();
-
+const user=useSelector((state) => state.users);
+console.log(user);
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -40,14 +42,20 @@ function SignIn() {
 
     setErrors(formErrors);
 
-    if (valid) {
-      dispatch(loginUser({ email: username, password }));
+   if (valid) {
+  dispatch(loginUser({ email: username, password }));
+
+  // wait 2 seconds before checking authentication
+  setTimeout(() => {
+    if (user?.authenticated) {
       toast.success("Login successful!");
-
-
-      navigate("/"); // Navigate to homepage
+      navigate("/login"); // Navigate to homepage
+    } else {
+      toast.error("Invalid login credentials!");
     }
-  };
+  }, 2000);
+}    
+    }
 
   return (
     <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
@@ -61,9 +69,9 @@ function SignIn() {
         {/* Username Field */}
         <div className="mb-3">
           <input
-            type="text"
+            type="email"
             ref={usernameRef}
-            placeholder="Enter username"
+            placeholder="Enter email"
             className={`form-control ${errors.username ? "is-invalid" : ""}`}
           />
           {errors.username && (
@@ -90,6 +98,14 @@ function SignIn() {
         >
           Login
         </button>
+
+        {/* ✅ Link to Registration */}
+        <p className="text-center mt-3">
+          Don’t have an account?{" "}
+          <Link to="/register" className="text-decoration-none text-primary fw-semibold">
+            Register here
+          </Link>
+        </p>
       </form>
     </div>
   );

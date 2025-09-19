@@ -71,7 +71,7 @@ nonvegItems :[
   { id: 219, name: "Cheese", description: "Delicious cheese, great for pizzas, sandwiches, and snacks.", price: 400, image: "/public/milk/cheese-milk.png" },
   { id: 220, name: "Butter", description: "Smooth and creamy butter, perfect for bread and cooking.", price: 200, image: "/public/milk/butter.png" },
   { id: 221, name: "Ghee", description: "Pure desi ghee, rich in flavor and nutrition.", price: 600, image: "/public/milk/ghee.webp" },
-  { id: 222, name: "Fresh Cream", description: "Rich fresh cream, perfect for desserts and gravies.", price: 150, image: "/public/milk/cream.webp" }
+
 ],
 medicineItems : [
   { id: 301, name: "Paracetamol", description: "Used for fever and mild pain relief. Commonly known as Crocin or Dolo-650.", price: 30, image: "/public/medicines/paracetamal.png" },
@@ -118,7 +118,32 @@ medicineItems : [
   { id: 418, name: "Kalakand", description: "Delicious milk-based kalakand topped with pistachios.", price: 280, image: "/public/sweets/kalakand.png" },
   { id: 419, name: "Kheer", description: "Creamy rice kheer cooked with milk and dry fruits.", price: 200, image: "/public/sweets/kheer.png" },
   { id: 420, name: "Modak", description: "Traditional sweet modak filled with jaggery and coconut.", price: 300, image: "/public/sweets/modak.png" }
-]
+],
+ drinkItems: [
+  { id: 1, name: "Thumsup", price: 50, image: "/public/drinks/Thumsup.jpg" },
+    { id: 2, name: "Coca Cola", price: 50, image: "/public/drinks/7 Up.jpg" },
+    { id: 3, name: "Pepsi", price: 45, image: "/public/drinks/Pepsi.jpg" },
+    { id: 4, name: "Sprite", price: 40, image: "/public/drinks/Sprite.jpg" },
+    { id: 5, name: "Fanta", price: 42, image: "/public/drinks/Fanta.jpg" },
+    { id: 6, name: "Maaza Mango", price: 55, image: "/public/drinks/Maaza Mango.jpg" },
+    { id: 7, name: "Red Bull", price: 120, image: "/public/drinks/Red Bull.jpg" },
+    { id: 8, name: "Tropicana Orange Juice", price: 65, image: "/public/drinks/Tropicana Orange Juice.jpg" },
+    { id: 9, name: "Bovonto", price: 35, image: "/public/drinks/Bovonto.jpg" },
+    { id: 10, name: "Mountain Dew", price: 48, image: "/public/drinks/Mountain Dew.jpg" },
+    { id: 11, name: "7 Up", price: 44, image: "/public/drinks/7 Up.jpg" },
+  ],
+  icecreamItems: [
+    { id: 1, name: "Vanilla Ice Cream", price: 60, image: "/public/icecreams/Vanilla Ice Cream.jpg" },
+    { id: 2, name: "Chocolate Ice Cream", price: 70, image: "public/icecreams/Chocolate Ice Cream.jpg" },
+    { id: 3, name: "Strawberry Ice Cream", price: 75, image: "/public/icecreams/Strawberry Ice Cream.jpg" },
+    { id: 4, name: "Butterscotch Ice Cream", price: 80, image: "/public/icecreams/Butterscotch Ice Cream.jpg" },
+    { id: 5, name: "Mango Ice Cream", price: 65, image: "/public/icecreams/Mango Ice Cream.jpg" },
+    { id: 6, name: "Black Currant Ice Cream", price: 85, image: "/public/icecreams/Black Currant Ice Cream.jpg" },
+    { id: 7, name: "Kulfi", price: 50, image: "/public/icecreams/Kulfi.jpg" },
+    { id: 8, name: "Choco Chip Ice Cream", price: 90, image: "/public/icecreams/Choco Chip Ice Cream.jpg" },
+    { id: 9, name: "Pista Ice Cream", price: 85, image: "/public/icecreams/Pista Ice Cream.jpg" },
+    { id: 10, name: "Oreo Ice Cream", price: 95, image: "/public/icecreams/Oreo Ice Cream.jpg" },
+  ],
   },
   reducers : {}
 });
