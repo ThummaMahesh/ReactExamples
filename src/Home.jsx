@@ -55,25 +55,25 @@ const testimonials = [
   {
     text: "Fresh fruits delivered right on time! Quality was amazing.",
     name: "Aditya",
-    image: "/public/Carousel/user4.jpg",
+    image: "/Carousel/user4.jpg",
     rating: 5,
   },
   {
     text: "Loved the organic vegetables. Very fresh and affordable!",
     name: "Priya Patel",
-    image: "/public/Carousel/user3.jpg",
+    image: "/Carousel/user3.jpg",
     rating: 5,
   },
   {
     text: "Fast delivery and great packaging. Will order again.",
     name: "Rahul Verma",
-    image: "/public/Carousel/user1.jpg",
+    image: "/Carousel/user1.jpg",
     rating: 5,
   },
   {
     text: "Wide variety of grocery items at reasonable prices.",
     name: "Sneha Reddy",
-    image:  "/public/Carousel/user2.jpg",
+    image:  "/Carousel/user2.jpg",
     rating: 5,
   },
 ];
@@ -131,7 +131,7 @@ const handleExplore = () =>{
     <div className="carousel-item active text-center">
       <Link to="/milk" className="text-decoration-none">
         <img
-          src="/public/carousel/freshmilk.jpg"
+          src="/carousel/freshmilk.jpg"
           className="d-block w-100 rounded"
           alt="Dairy & Milk"
         />
@@ -144,7 +144,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
   <Link to="/drinks" className="text-decoration-none">
     <img
-      src="/public/carousel/drinks.jpg"   // 👈 replace with your drinks image
+      src="/carousel/drinks.jpg"   // 👈 replace with your drinks image
       className="d-block w-100 rounded"
       alt="Drinks"
     />
@@ -157,7 +157,7 @@ const handleExplore = () =>{
 <div className="carousel-item text-center">
   <Link to="/icecreams" className="text-decoration-none">
     <img
-      src="/public/Carousel/icecreams.jpg"   // 👈 replace with your ice creams image
+      src="/Carousel/icecreams.jpg"   // 👈 replace with your ice creams image
       className="d-block w-100 rounded"
       alt="Ice Creams"
     />
@@ -173,7 +173,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
       <Link to="/veg" className="text-decoration-none">
         <img
-          src="/public/carousel/veg&fruits.jpg"
+          src="/carousel/veg&fruits.jpg"
           className="d-block w-100 rounded"
           alt="Fruits & Vegetables"
         />
@@ -188,7 +188,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
       <Link to="/sweets" className="text-decoration-none">
         <img
-          src="/public/carousel/snacks&sweets.jpg"
+          src="/carousel/snacks&sweets.jpg"
           className="d-block w-100 rounded"
           alt="Snacks & Sweets"
         />
@@ -203,7 +203,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
       <Link to="/nonveg" className="text-decoration-none">
         <img
-          src="/public/carousel/nonveg.jpeg"
+          src="/carousel/nonveg.jpeg"
           className="d-block w-100 rounded"
           alt="Non-Veg"
         />
@@ -218,7 +218,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
       <Link to="/medicine" className="text-decoration-none">
         <img
-          src="/public/carousel/medicine.jpg"
+          src="/carousel/medicine.jpg"
           className="d-block w-100 rounded"
           alt="Medicines"
         />
