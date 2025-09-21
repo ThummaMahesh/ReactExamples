@@ -5,6 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Autoplay, Pagination } from "swiper/modules";
 import {  Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -118,141 +122,161 @@ const handleExplore = () =>{
 
 
         <section className="py-5 bg-light">
-      <div className="container" ref={categoriesRef}>
-        <h2 className="text-center mb-4 fw-bold">Shop by Category</h2>
-<div id="categoryCarousel" className="carousel slide" data-bs-ride="carousel">
-  {/* Carousel Indicators */}
-  {/*  */}
+  <div className="container">
+    <h2 className="text-center mb-4 fw-bold">Shop by Category</h2>
 
-  {/* Carousel Inner */}
-  <div className="carousel-inner">
+     <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          spaceBetween={20}
+          slidesPerView={1} // show only one at a time
+          navigation
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
+          loop={true}
+        >
+          {/* Dairy & Milk */}
+          <SwiperSlide className="text-center">
+            <Link to="/milk" className="text-decoration-none">
+              <img
+                src="/Carousel/freshmilk.jpg"
+                alt="Dairy & Milk"
+                className="d-block mx-auto rounded"
+                style={{
+                  width: "100%", // 👈 control image width
+                  maxHeight: "550px",
+                  objectFit: "contain",
+                }}
+              />
+              <div className="mt-3">
+                <h5 className="fw-bold">🥛 Dairy & Milk</h5>
+                <p className="text-muted">Fresh and healthy milk products</p>
+              </div>
+            </Link>
+          </SwiperSlide>
 
-    {/* Dairy & Milk */}
-    <div className="carousel-item active text-center">
-      <Link to="/milk" className="text-decoration-none">
-        <img
-          src="/Carousel/freshmilk.jpg"
-          className="d-block w-100 rounded"
-          alt="Dairy & Milk"
-        />
-        <div className="mt-3">
-          <h5 className="fw-bold">🥛 Dairy & Milk</h5>
-          <p className="text-muted">Fresh and healthy milk products</p>
-        </div>
-      </Link>
-    </div>
-    <div className="carousel-item text-center">
-  <Link to="/drinks" className="text-decoration-none">
-    <img
-      src="/Carousel/drinks.jpg"   // 👈 replace with your drinks image
-      className="d-block w-100 rounded"
-      alt="Drinks"
-    />
-    <div className="mt-3">
-      <h5 className="fw-bold">🥤 Drinks</h5>
-      <p className="text-muted">Cool and refreshing beverages</p>
-    </div>
-  </Link>
-</div>
-<div className="carousel-item text-center">
-  <Link to="/public/icecreams" className="text-decoration-none">
-    <img
-      src="/Carousel/icecreams.jpg"   // 👈 replace with your ice creams image
-      className="d-block w-100 rounded"
-      alt="Ice Creams"
-    />
-    <div className="mt-3">
-      <h5 className="fw-bold">🍦 Ice Creams</h5>
-      <p className="text-muted">Delicious and creamy desserts</p>
-    </div>
-  </Link>
-</div>
+          {/* Drinks */}
+          <SwiperSlide className="text-center">
+            <Link to="/drinks" className="text-decoration-none">
+              <img
+                src="/Carousel/drinks.jpg"
+                alt="Drinks"
+                className="d-block mx-auto rounded"
+                style={{
+                  width: "100%",
+                  maxHeight: "550px",
+                  objectFit: "contain",
+                }}
+              />
+              <div className="mt-3">
+                <h5 className="fw-bold">🥤 Drinks</h5>
+                <p className="text-muted">Cool and refreshing beverages</p>
+              </div>
+            </Link>
+          </SwiperSlide>
 
+          {/* Ice Creams */}
+          <SwiperSlide className="text-center">
+            <Link to="/icecreams" className="text-decoration-none">
+              <img
+                src="/Carousel/icecreams.jpg"
+                alt="Ice Creams"
+                className="d-block mx-auto rounded"
+                style={{
+                  width: "100%",
+                  maxHeight: "550px",
+                  objectFit: "contain",
+                }}
+              />
+              <div className="mt-3">
+                <h5 className="fw-bold">🍦 Ice Creams</h5>
+                <p className="text-muted">Delicious and creamy desserts</p>
+              </div>
+            </Link>
+          </SwiperSlide>
 
-    {/* Fruits & Vegetables */}
-    <div className="carousel-item text-center">
-      <Link to="/veg" className="text-decoration-none">
-        <img
-          src="/Carousel/veg&fruits.jpg"
-          className="d-block w-100 rounded"
-          alt="Fruits & Vegetables"
-        />
-        <div className="mt-3">
-          <h5 className="fw-bold">🍎 Fruits & Vegetables</h5>
-          <p className="text-muted">Freshly picked from farms</p>
-        </div>
-      </Link>
-    </div>
+          {/* Fruits & Vegetables */}
+          <SwiperSlide className="text-center">
+            <Link to="/veg" className="text-decoration-none">
+              <img
+                src="/Carousel/veg&fruits.jpg"
+                alt="Fruits & Vegetables"
+                className="d-block mx-auto rounded"
+                style={{
+                  width: "100%",
+                  maxHeight: "550px",
+                  objectFit: "contain",
+                }}
+              />
+              <div className="mt-3">
+                <h5 className="fw-bold">🍎 Fruits & Vegetables</h5>
+                <p className="text-muted">Freshly picked from farms</p>
+              </div>
+            </Link>
+          </SwiperSlide>
 
-    {/* Snacks & Sweets */}
-    <div className="carousel-item text-center">
-      <Link to="/sweets" className="text-decoration-none">
-        <img
-          src="/Carousel/snacks&sweets.jpg"
-          className="d-block w-100 rounded"
-          alt="Snacks & Sweets"
-        />
-        <div className="mt-3">
-          <h5 className="fw-bold">🍪 Snacks & Sweets</h5>
-          <p className="text-muted">Delicious treats for everyone</p>
-        </div>
-      </Link>
-    </div>
+          {/* Snacks & Sweets */}
+          <SwiperSlide className="text-center">
+            <Link to="/sweets" className="text-decoration-none">
+              <img
+                src="/Carousel/snacks&sweets.jpg"
+                alt="Snacks & Sweets"
+                className="d-block mx-auto rounded"
+                style={{
+                  width: "100%",
+                  maxHeight: "550px",
+                  objectFit: "contain",
+                }}
+              />
+              <div className="mt-3">
+                <h5 className="fw-bold">🍪 Snacks & Sweets</h5>
+                <p className="text-muted">Delicious treats for everyone</p>
+              </div>
+            </Link>
+          </SwiperSlide>
 
-    {/* Non-Veg */}
-    <div className="carousel-item text-center">
-      <Link to="/nonveg" className="text-decoration-none">
-        <img
-          src="/Carousel/nonveg.jpeg"
-          className="d-block w-100 rounded"
-          alt="Non-Veg"
-        />
-        <div className="mt-3">
-          <h5 className="fw-bold">🍗 Non-Veg</h5>
-          <p className="text-muted">Fresh and quality meat items</p>
-        </div>
-      </Link>
-    </div>
+          {/* Non-Veg */}
+          <SwiperSlide className="text-center">
+            <Link to="/nonveg" className="text-decoration-none">
+              <img
+                src="/Carousel/nonveg.jpeg"
+                alt="Non-Veg"
+                className="d-block mx-auto rounded"
+                style={{
+                  width: "100%",
+                  maxHeight: "550px",
+                  objectFit: "contain",
+                }}
+              />
+              <div className="mt-3">
+                <h5 className="fw-bold">🍗 Non-Veg</h5>
+                <p className="text-muted">Fresh and quality meat items</p>
+              </div>
+            </Link>
+          </SwiperSlide>
 
-    {/* Medicines */}
-    <div className="carousel-item text-center">
-      <Link to="/medicine" className="text-decoration-none">
-        <img
-          src="/Carousel/medicine.jpg"
-          className="d-block w-100 rounded"
-          alt="Medicines"
-        />
-        <div className="mt-3">
-          <h5 className="fw-bold">💊 Medicines</h5>
-          <p className="text-muted">Healthcare essentials delivered</p>
-        </div>
-      </Link>
-    </div>
+          {/* Medicines */}
+          <SwiperSlide className="text-center">
+            <Link to="/medicine" className="text-decoration-none">
+              <img
+                src="/Carousel/medicine.jpg"
+                alt="Medicines"
+                className="d-block mx-auto rounded"
+                style={{
+                  width: "100%",
+                  maxHeight: "550px",
+                  objectFit: "contain",
+                }}
+              />
+              <div className="mt-3">
+                <h5 className="fw-bold">💊 Medicines</h5>
+                <p className="text-muted">Healthcare essentials delivered</p>
+              </div>
+            </Link>
+          </SwiperSlide>
+        </Swiper>
+  </div>
+</section>
 
-  </div> {/* closes carousel-inner */}
-
-  {/* Carousel Controls */}
-  <button
-    className="carousel-control-prev"
-    type="button"
-    data-bs-target="#categoryCarousel"
-    data-bs-slide="prev"
-  >
-    <span className="carousel-control-prev-icon  text-bg-dark rounded-circle" aria-hidden="true"></span>
-    <span className="visually-hidden">Previous</span>
-  </button>
-  <button
-    className="carousel-control-next"
-    type="button"
-    data-bs-target="#categoryCarousel"
-    data-bs-slide="next"
-  >
-    <span className="carousel-control-next-icon text-bg-dark rounded-circle" aria-hidden="true" ></span>
-    <span className="visually-hidden">Next</span>
-  </button>
-</div>
-</div>
- </section>
 
 
       {/* ---------- Why Choose Us Section ---------- */}

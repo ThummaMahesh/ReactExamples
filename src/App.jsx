@@ -38,15 +38,24 @@ function App() {
   // 🔑 Ref points to the collapsible <div id="navbarNav">
   const collapseRef = useRef(null);
 
+  
+
   // 🔑 One handler to close the menu after any nav click
-  const handleNavClick = useCallback(() => {
-    if (!collapseRef.current || !window.bootstrap?.Collapse) return;
-    const bsCollapse = window.bootstrap.Collapse.getOrCreateInstance(
-      collapseRef.current,
-      { toggle: false } // don't auto-toggle; we'll call hide()
-    );
-    bsCollapse.hide();
-  }, []);
+  const handleNavClick = () => {
+  const navbarCollapse = collapseRef.current;
+  if (!navbarCollapse) return;
+
+  // Get existing Bootstrap Collapse instance
+  const bsCollapse = window.bootstrap.Collapse.getInstance(navbarCollapse);
+
+  if (bsCollapse) {
+    bsCollapse.hide(); // collapse the menu
+  } else {
+    // create a temporary instance and hide
+    new window.bootstrap.Collapse(navbarCollapse, { toggle: true }).hide();
+  }
+};
+
 
   return (
     <>

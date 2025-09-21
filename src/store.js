@@ -90,7 +90,7 @@ medicineItems : [
   { id: 314, name: "Glucometer Strips", description: "Test strips for monitoring blood sugar levels at home.", price: 600, image: "/medicines/Glucometer Strips.png" },
   { id: 315, name: "Bandages", description: "Sterile bandages for wounds and injuries.", price: 50, image: "/medicines/Bandages.jpg" },
   { id: 316, name: "Antiseptic Liquid", description: "Used to clean wounds and prevent infections (Dettol/Savlon).", price: 120, image: "/medicines/Antiseptic Liquid.webp" },
-  { id: 317, name: "Vitamin D3", description: "Supports bone health and immunity, essential for calcium absorption.", price: 180, image: "/medicines/Vitamin D3" },
+  { id: 317, name: "Vitamin D3", description: "Supports bone health and immunity, essential for calcium absorption.", price: 180, image: "/public/medicines/Vitamin D3.jpg" },
   { id: 318, name: "Calcium Tablets", description: "Boosts bone strength, prevents osteoporosis.", price: 200, image: "/medicines/Calcium Tablets.jpg" },
   { id: 319, name: "Iron Supplements", description: "Used to treat iron deficiency and anemia.", price: 170, image: "/medicines/Iron Supplements.jpg" },
   { id: 320, name: "Electrolyte Powder", description: "Energy and hydration drink powder, replenishes lost salts.", price: 40, image: "/medicines/Electrolyte Powder.jpg" },
@@ -134,7 +134,7 @@ medicineItems : [
   ],
   icecreamItems: [
     { id: 1, name: "Vanilla Ice Cream", price: 60, image: "/icecreams/Vanilla Ice Cream.jpg" },
-    { id: 2, name: "Chocolate Ice Cream", price: 70, image: "public/icecreams/Chocolate Ice Cream.jpg" },
+    { id: 2, name: "Chocolate Ice Cream", price: 70, image: "/icecreams/Chocolate Ice Cream.jpg" },
     { id: 3, name: "Strawberry Ice Cream", price: 75, image: "/icecreams/Strawberry Ice Cream.jpg" },
     { id: 4, name: "Butterscotch Ice Cream", price: 80, image: "/icecreams/Butterscotch Ice Cream.jpg" },
     { id: 5, name: "Mango Ice Cream", price: 65, image: "/icecreams/Mango Ice Cream.jpg" },
