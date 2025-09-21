@@ -82,24 +82,24 @@ medicineItems : [
   { id: 306, name: "Multivitamin Tablets", description: "Complete multivitamin supplement for daily health and immunity.", price: 200, image: "/medicines/multivitamin.png" },
   { id: 307, name: "ORS Sachets", description: "Oral rehydration solution for dehydration due to diarrhea or heat.", price: 15, image: "/medicines/ors.avif" },
   { id: 308, name: "Cough Syrup", description: "Relieves dry and wet cough, soothes throat irritation.", price: 90, image: "/medicines/cough-syrup.webp" },
-  { id: 309, name: "Azithromycin", description: "Broad-spectrum antibiotic used for bacterial infections.", price: 150, image: "/medicines/azithromycin.png" },
-  { id: 310, name: "Pain Relief Spray", description: "Instant pain relief spray for muscle pain, sprains, and joint pain.", price: 180, image: "/medicines/pain-spray.png" },
-  { id: 311, name: "Digene", description: "Antacid tablets or syrup for acidity and indigestion relief.", price: 80, image: "/medicines/digene.png" },
-  { id: 312, name: "ORS Drink Bottle", description: "Ready-to-drink rehydration solution with electrolytes.", price: 35, image: "/medicines/ors-bottle.png" },
-  { id: 313, name: "Insulin Injection", description: "Essential for diabetic patients to control blood sugar levels.", price: 500, image: "/medicines/insulin.png" },
-  { id: 314, name: "Glucometer Strips", description: "Test strips for monitoring blood sugar levels at home.", price: 600, image: "/medicines/glucometer-strips.png" },
-  { id: 315, name: "Bandages", description: "Sterile bandages for wounds and injuries.", price: 50, image: "/medicines/bandage.png" },
-  { id: 316, name: "Antiseptic Liquid", description: "Used to clean wounds and prevent infections (Dettol/Savlon).", price: 120, image: "/medicines/antiseptic.png" },
-  { id: 317, name: "Vitamin D3", description: "Supports bone health and immunity, essential for calcium absorption.", price: 180, image: "/medicines/vitamin-d3.png" },
-  { id: 318, name: "Calcium Tablets", description: "Boosts bone strength, prevents osteoporosis.", price: 200, image: "/medicines/calcium.png" },
-  { id: 319, name: "Iron Supplements", description: "Used to treat iron deficiency and anemia.", price: 170, image: "/medicines/iron.png" },
-  { id: 320, name: "Electrolyte Powder", description: "Energy and hydration drink powder, replenishes lost salts.", price: 40, image: "/medicines/electrolyte.png" },
-  { id: 321, name: "Hand Sanitizer", description: "Kills 99.9% of germs, essential for hygiene.", price: 70, image: "/medicines/sanitizer.png" },
-  { id: 322, name: "Thermometer", description: "Digital thermometer for measuring body temperature.", price: 250, image: "/medicines/thermometer.png" }
+  { id: 309, name: "Azithromycin", description: "Broad-spectrum antibiotic used for bacterial infections.", price: 150, image: "/medicines/Azithromycin.jpeg" },
+  { id: 310, name: "Pain Relief Spray", description: "Instant pain relief spray for muscle pain, sprains, and joint pain.", price: 180, image: "/medicines/Pain Relief Spray.webp" },
+  { id: 311, name: "Digene", description: "Antacid tablets or syrup for acidity and indigestion relief.", price: 80, image: "/medicines/Digene.jpg" },
+  { id: 312, name: "ORS Drink Bottle", description: "Ready-to-drink rehydration solution with electrolytes.", price: 35, image: "/medicines/ORS Drink Bottle.jpg" },
+  { id: 313, name: "Insulin Injection", description: "Essential for diabetic patients to control blood sugar levels.", price: 500, image: "/medicines/Insulin Injection.webp" },
+  { id: 314, name: "Glucometer Strips", description: "Test strips for monitoring blood sugar levels at home.", price: 600, image: "/medicines/Glucometer Strips.png" },
+  { id: 315, name: "Bandages", description: "Sterile bandages for wounds and injuries.", price: 50, image: "/medicines/Bandages.jpg" },
+  { id: 316, name: "Antiseptic Liquid", description: "Used to clean wounds and prevent infections (Dettol/Savlon).", price: 120, image: "/medicines/Antiseptic Liquid.webp" },
+  { id: 317, name: "Vitamin D3", description: "Supports bone health and immunity, essential for calcium absorption.", price: 180, image: "/medicines/Vitamin D3" },
+  { id: 318, name: "Calcium Tablets", description: "Boosts bone strength, prevents osteoporosis.", price: 200, image: "/medicines/Calcium Tablets.jpg" },
+  { id: 319, name: "Iron Supplements", description: "Used to treat iron deficiency and anemia.", price: 170, image: "/medicines/Iron Supplements.jpg" },
+  { id: 320, name: "Electrolyte Powder", description: "Energy and hydration drink powder, replenishes lost salts.", price: 40, image: "/medicines/Electrolyte Powder.jpg" },
+  { id: 321, name: "Hand Sanitizer", description: "Kills 99.9% of germs, essential for hygiene.", price: 70, image: "/medicines/Hand Sanitizer.webp" },
+  { id: 322, name: "Thermometer", description: "Digital thermometer for measuring body temperature.", price: 250, image: "/medicines/Thermometer.png" }
 ],
  SweetsItems :[
   { id: 401, name: "Gulab Jamun", description: "Soft and juicy gulab jamun soaked in sugar syrup.", price: 5, image: "/sweets/gulab-jamun.png" },
-  { id: 402, name: "Rasgulla", description: "Spongy rasgulla made with fresh chhena and sugar syrup.", price: 140, image: "/sweets/rasgulla.png" },
+  { id: 402, name: "Rasgulla", description: "Spongy rasgulla made with fresh chhena and sugar syrup.", price: 140, image: "/sweets/Rasgulla.png" },
   { id: 403, name: "Kaju Katli", description: "Delicious kaju katli made with cashews and sugar.", price: 500, image: "/sweets/kaju-katli.png" },
   { id: 404, name: "Motichoor Laddu", description: "Soft and tasty motichoor laddu, perfect for festivals.", price: 200, image: "/sweets/motichoor-laddu.png" },
   { id: 405, name: "Besan Laddu", description: "Traditional besan laddu made with gram flour and ghee.", price: 180, image: "/sweets/besan-laddu.png" },
@@ -179,14 +179,15 @@ const wishlistSlice = createSlice({
 });
 
 
+// Load from localStorage
 const loadFromLocalStorage = () => {
   const data = localStorage.getItem("userState");
   return data
     ? JSON.parse(data)
-    : { allUsers: [], authenticated: false, currentUser: null };
+    : { allUsers: [], authenticated: false, currentUser: null, error: null };
 };
 
-// Save data to localStorage
+// Save to localStorage
 const saveToLocalStorage = (state) => {
   localStorage.setItem("userState", JSON.stringify(state));
 };
@@ -198,10 +199,12 @@ const userSlice = createSlice({
   initialState,
   reducers: {
     registerUser: (state, action) => {
-      state.allUsers.push(action.payload); // add new user
+      state.allUsers.push(action.payload);
+      state.error = null; // clear errors on successful register
       saveToLocalStorage(state);
     },
     loginUser: (state, action) => {
+       state.error = null; 
       const { email, password } = action.payload;
       const user = state.allUsers.find(
         (u) => u.email === email && u.password === password
@@ -209,19 +212,22 @@ const userSlice = createSlice({
       if (user) {
         state.authenticated = true;
         state.currentUser = user;
+       // ✅ successful login
+      } else {
+        state.authenticated = false;
+        state.currentUser = null;
+        state.error = "Invalid email or password"; // ❌ error state
       }
       saveToLocalStorage(state);
     },
     logoutUser: (state) => {
       state.authenticated = false;
       state.currentUser = null;
+      state.error = null;
       saveToLocalStorage(state);
     },
   },
 });
-
-
-
 
 
 

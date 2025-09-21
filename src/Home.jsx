@@ -18,7 +18,7 @@ import  { useState, useEffect } from "react";
 function Home() {
 
 const categoriesRef =useRef(null);
-const offerEndTime = new Date("2025-09-20T23:59:59").getTime();
+const offerEndTime = new Date("2025-09-24T23:59:59").getTime();
 
 const [timeLeft, setTimeLeft] = useState("");
 
@@ -131,7 +131,7 @@ const handleExplore = () =>{
     <div className="carousel-item active text-center">
       <Link to="/milk" className="text-decoration-none">
         <img
-          src="/carousel/freshmilk.jpg"
+          src="/Carousel/freshmilk.jpg"
           className="d-block w-100 rounded"
           alt="Dairy & Milk"
         />
@@ -144,7 +144,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
   <Link to="/drinks" className="text-decoration-none">
     <img
-      src="/carousel/drinks.jpg"   // 👈 replace with your drinks image
+      src="/Carousel/drinks.jpg"   // 👈 replace with your drinks image
       className="d-block w-100 rounded"
       alt="Drinks"
     />
@@ -155,7 +155,7 @@ const handleExplore = () =>{
   </Link>
 </div>
 <div className="carousel-item text-center">
-  <Link to="/icecreams" className="text-decoration-none">
+  <Link to="/public/icecreams" className="text-decoration-none">
     <img
       src="/Carousel/icecreams.jpg"   // 👈 replace with your ice creams image
       className="d-block w-100 rounded"
@@ -173,7 +173,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
       <Link to="/veg" className="text-decoration-none">
         <img
-          src="/carousel/veg&fruits.jpg"
+          src="/Carousel/veg&fruits.jpg"
           className="d-block w-100 rounded"
           alt="Fruits & Vegetables"
         />
@@ -188,7 +188,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
       <Link to="/sweets" className="text-decoration-none">
         <img
-          src="/carousel/snacks&sweets.jpg"
+          src="/Carousel/snacks&sweets.jpg"
           className="d-block w-100 rounded"
           alt="Snacks & Sweets"
         />
@@ -203,7 +203,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
       <Link to="/nonveg" className="text-decoration-none">
         <img
-          src="/carousel/nonveg.jpeg"
+          src="/Carousel/nonveg.jpeg"
           className="d-block w-100 rounded"
           alt="Non-Veg"
         />
@@ -218,7 +218,7 @@ const handleExplore = () =>{
     <div className="carousel-item text-center">
       <Link to="/medicine" className="text-decoration-none">
         <img
-          src="/carousel/medicine.jpg"
+          src="/Carousel/medicine.jpg"
           className="d-block w-100 rounded"
           alt="Medicines"
         />

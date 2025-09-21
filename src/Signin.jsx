@@ -4,15 +4,24 @@ import { loginUser } from "./store";
 import { useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
 
 function SignIn() {
   const dispatch = useDispatch();
   const usernameRef = useRef(null);
   const passwordRef = useRef(null);
   const [errors, setErrors] = useState({ username: "", password: "" });
+const { authenticated, error } = useSelector((state) => state.users);
   const navigate = useNavigate();
-const user=useSelector((state) => state.users);
-console.log(user);
+
+  useEffect(() => {
+    if (authenticated === true && error === null) {
+      toast.success("✅ Login successful!");
+      navigate("/");
+    } else if (error) {
+      toast.error("❌ " + error);
+    }
+  }, [authenticated, error, navigate])
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -24,10 +33,10 @@ console.log(user);
 
     // Username validation
     if (!username) {
-      formErrors.username = "Username is required";
+      formErrors.username = "email is required";
       valid = false;
     } else if (username.length < 3) {
-      formErrors.username = "Username must be at least 3 characters";
+      formErrors.username = "email must be at least 3 characters";
       valid = false;
     }
 
@@ -45,15 +54,7 @@ console.log(user);
    if (valid) {
   dispatch(loginUser({ email: username, password }));
 
-  // wait 2 seconds before checking authentication
-  setTimeout(() => {
-    if (user?.authenticated) {
-      toast.success("Login successful!");
-      navigate("/login"); // Navigate to homepage
-    } else {
-      toast.error("Invalid login credentials!");
-    }
-  }, 2000);
+  
 }    
     }
 

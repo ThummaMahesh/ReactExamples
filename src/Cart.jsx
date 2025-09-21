@@ -34,7 +34,7 @@ function Cart() {
   const [errorMsg, setErrorMsg] = useState("");
   const [step, setStep] = useState("checkout"); // checkout → email → payment
   const [paymentMode, setPaymentMode] = useState("");
-  const [userEmail, setUserEmail] = useState("");
+ const userEmail = user.authenticated ? user.currentUser.email : "";
 
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.Cart);
@@ -66,7 +66,7 @@ function Cart() {
     const handlecheckout = () => {
     if(!user.authenticated){
       console.log("hello i am checkout");
-      navigate('/signin');
+      navigate('/login');
     }
     else{
       setStep("payment");
@@ -114,7 +114,7 @@ function Cart() {
         name: item.name,
         price: item.price,
         units: item.quantity,
-        image: `${window.location.origin}${item.image}`,
+        image: `${item.image}`,
       })),
       cost: {
         shipping: shippingCost,
@@ -125,9 +125,9 @@ function Cart() {
     };
 
     emailjs
-      .send("service_wqayxvn", "template_9y2dc8r", templateParams, "G3Lhqod60Pt6j5t75")
+      .send("service_fmdzdjd", "template_cfccktc", templateParams, "zMk6i0e4mGTx3z3yX")
       .then(() => toast.success("Order confirmation email sent!"))
-      .catch(() => toast.error("Failed to send confirmation email"));
+      .catch((err) => toast.error("Failed to send confirmation email"+err));
   };
 
   // ✅ Coupon apply
