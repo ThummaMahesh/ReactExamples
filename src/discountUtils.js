@@ -1,9 +1,7 @@
 // ✅ Calculate total cart value
 export function calculateTotal(cartItems) {
-  return cartItems.reduce(
-    (total, item) => total + item.price * item.quantity,
-    0
-  );
+  const total = cartItems.reduce((total, item) => total + item.price * item.quantity,0);
+  return total;
 }
 
 // ✅ Calculate button discount (flat %)

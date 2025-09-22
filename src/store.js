@@ -7,7 +7,7 @@ const vegSlice = createSlice({
   { id: 2, name: "Potato", description: "Golden potatoes rich in starch, used in fries, curries, and parathas.", price: 1, image: "/veg/potato.png" },
   { id: 3, name: "Ladies Finger (Bhindi)", description: "Green bhindi with a crunchy taste, ideal for stir-fries and curries.", price: 50, image: "/veg/bendi.png" },
   { id: 4, name: "Bottle Gourd", description: "Light and healthy vegetable for curries, soups, and dals.", price: 35, image: "/veg/bottle_guard.png" },
-  { id: 5, name: "Carrot", description: "Crunchy and sweet carrots, rich in Vitamin A, great for salads and curries.", price: 45, image: "/veg/carrot.png" },
+  { id: 5, name: "Carrot", description: "Crunchy and sweet carrots, rich in Vitamin A, great for salads and curries.", price: 25, image: "/veg/carrot.png" },
   { id: 6, name: "Cabbage", description: "Fresh green cabbage, perfect for stir-fry, curries, and momos stuffing.", price: 25, image: "/veg/cabbage.png" },
   { id: 7, name: "Cauliflower", description: "White florets of cauliflower, delicious in curries and pakoras.", price: 55, image: "/veg/cauliflower.png" },
   { id: 8, name: "Spinach (Palak)", description: "Green leafy spinach rich in iron, best for palak paneer and dals.", price: 20, image: "/veg/spinach.png" },
@@ -26,11 +26,11 @@ const vegSlice = createSlice({
 ]
 ,
 nonvegItems :[
-  { id: 101, name: "Chicken", description: "Fresh farm chicken, tender and juicy, perfect for curries, biryanis, and roasts.", price: 200, image: "/nonveg/chicken.png" },
+  { id: 101, name: "Chicken", description: "Fresh farm chicken, tender and juicy, perfect for curries, biryanis, and roasts.", price: 100, image: "/nonveg/chicken.png" },
   { id: 102, name: "Mutton", description: "Premium quality mutton, soft and delicious, ideal for curries and biryanis.", price: 550, image: "/nonveg/mutton.webp" },
-  { id: 103, name: "Fish", description: "Fresh river fish, rich in protein, great for fries, curries, and soups.", price: 300, image: "/nonveg/fish.png" },
+  { id: 103, name: "Fish", description: "Fresh river fish, rich in protein, great for fries, curries, and soups.", price: 50, image: "/nonveg/fish.png" },
   { id: 104, name: "Prawns", description: "Juicy prawns full of flavor, perfect for curries, stir-fries, and biryanis.", price: 400, image: "/nonveg/prawns.png" },
-  { id: 105, name: "Eggs", description: "Farm-fresh eggs, full of protein, ideal for omelets, curries, and snacks.", price: 60, image: "/nonveg/eggs.png" },
+  { id: 105, name: "Eggs", description: "Farm-fresh eggs, full of protein, ideal for omelets, curries, and snacks.", price: 30, image: "/nonveg/eggs.png" },
   { id: 106, name: "Crab", description: "Fresh sea crab, juicy and rich in flavor, great for curries and seafood dishes.", price: 500, image: "/nonveg/crab.png" },
   { id: 107, name: "Lamb", description: "Tender lamb meat, perfect for kebabs, curries, and grills.", price: 600, image: "/nonveg/lamb.png" },
   { id: 108, name: "Duck", description: "Farm-raised duck, flavorful and rich, ideal for roasts and curries.", price: 450, image: "/nonveg/duck.png" },
@@ -51,7 +51,7 @@ nonvegItems :[
   ],
  milkItems :[
   { id: 201, name: "Full Cream Milk", description: "Rich and creamy full cream milk, perfect for tea, coffee, and desserts.", price: 60, image: "/milk/full-cream.png" },
-  { id: 202, name: "Toned Milk", description: "Healthy toned milk with reduced fat, ideal for daily use.", price: 50, image: "/milk/toned-milk.webp" },
+  { id: 202, name: "Toned Milk", description: "Healthy toned milk with reduced fat, ideal for daily use.", price: 20, image: "/milk/toned-milk.webp" },
   { id: 203, name: "Double Toned Milk", description: "Low-fat double toned milk, great for fitness-conscious people.", price: 45, image: "/milk/double-toned.webp" },
   { id: 204, name: "Skimmed Milk", description: "Fat-free skimmed milk, rich in protein, suitable for diets.", price: 40, image: "/milk/skimmed-milk.png" },
   { id: 205, name: "Cow Milk", description: "Pure cow milk, fresh and nutritious, perfect for daily drinking.", price: 55, image: "/milk/cow-milk.webp" },
@@ -74,7 +74,7 @@ nonvegItems :[
 
 ],
 medicineItems : [
-  { id: 301, name: "Paracetamol", description: "Used for fever and mild pain relief. Commonly known as Crocin or Dolo-650.", price: 30, image: "/medicines/paracetamal.png" },
+  { id: 301, name: "Paracetamol", description: "Used for fever and mild pain relief. Commonly known as Crocin or Dolo-650.", price: 10, image: "/medicines/paracetamal.png" },
   { id: 302, name: "Ibuprofen", description: "Anti-inflammatory and pain reliever, good for headaches and muscle pain.", price: 40, image: "/medicines/ibuprofen.png" },
   { id: 303, name: "Amoxicillin", description: "Antibiotic used to treat bacterial infections like throat infection, pneumonia.", price: 120, image: "/medicines/amoxicillin.png" },
   { id: 304, name: "Cetirizine", description: "Anti-allergic tablet used for runny nose, sneezing, and allergy relief.", price: 25, image: "/medicines/cetirizine.png" },
@@ -101,7 +101,7 @@ medicineItems : [
   { id: 401, name: "Gulab Jamun", description: "Soft and juicy gulab jamun soaked in sugar syrup.", price: 5, image: "/sweets/gulab-jamun.png" },
   { id: 402, name: "Rasgulla", description: "Spongy rasgulla made with fresh chhena and sugar syrup.", price: 140, image: "/sweets/Rasgulla.png" },
   { id: 403, name: "Kaju Katli", description: "Delicious kaju katli made with cashews and sugar.", price: 500, image: "/sweets/kaju-katli.png" },
-  { id: 404, name: "Motichoor Laddu", description: "Soft and tasty motichoor laddu, perfect for festivals.", price: 200, image: "/sweets/motichoor-laddu.png" },
+  { id: 404, name: "Motichoor Laddu", description: "Soft and tasty motichoor laddu, perfect for festivals.", price: 20, image: "/sweets/motichoor-laddu.png" },
   { id: 405, name: "Besan Laddu", description: "Traditional besan laddu made with gram flour and ghee.", price: 180, image: "/sweets/besan-laddu.png" },
   { id: 406, name: "Soan Papdi", description: "Flaky and sweet soan papdi, a favorite Indian sweet.", price: 160, image: "/sweets/soan-papdi.png" },
   { id: 407, name: "Jalebi", description: "Crispy and juicy jalebi fried in ghee and dipped in syrup.", price: 120, image: "/sweets/jalebi.png" },
@@ -120,7 +120,7 @@ medicineItems : [
   { id: 420, name: "Modak", description: "Traditional sweet modak filled with jaggery and coconut.", price: 300, image: "/sweets/modak.png" }
 ],
  drinkItems: [
-  { id: 1, name: "Thumsup", price: 50, image: "/drinks/Thumsup.jpg" },
+  { id: 1, name: "Thumsup", price: 20, image: "/drinks/Thumsup.jpg" },
     { id: 2, name: "Coca Cola", price: 50, image: "/drinks/7 Up.jpg" },
     { id: 3, name: "Pepsi", price: 45, image: "/drinks/Pepsi.jpg" },
     { id: 4, name: "Sprite", price: 40, image: "/drinks/Sprite.jpg" },
@@ -134,9 +134,9 @@ medicineItems : [
   ],
   icecreamItems: [
     { id: 1, name: "Vanilla Ice Cream", price: 60, image: "/icecreams/Vanilla Ice Cream.jpg" },
-    { id: 2, name: "Chocolate Ice Cream", price: 70, image: "/icecreams/Chocolate Ice Cream.jpg" },
+    { id: 2, name: "Chocolate Ice Cream", price: 10, image: "/icecreams/Chocolate Ice Cream.jpg" },
     { id: 3, name: "Strawberry Ice Cream", price: 75, image: "/icecreams/Strawberry Ice Cream.jpg" },
-    { id: 4, name: "Butterscotch Ice Cream", price: 80, image: "/icecreams/Butterscotch Ice Cream.jpg" },
+    { id: 4, name: "Butterscotch Ice Cream", price: 20, image: "/icecreams/Butterscotch Ice Cream.jpg" },
     { id: 5, name: "Mango Ice Cream", price: 65, image: "/icecreams/Mango Ice Cream.jpg" },
     { id: 6, name: "Black Currant Ice Cream", price: 85, image: "/icecreams/Black Currant Ice Cream.jpg" },
     { id: 7, name: "Kulfi", price: 50, image: "/icecreams/Kulfi.jpg" },

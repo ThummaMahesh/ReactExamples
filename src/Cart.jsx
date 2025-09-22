@@ -38,8 +38,9 @@ function Cart() {
 
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.Cart);
-
+  console.log(cartItems);
   let totalAmount = calculateTotal(cartItems);
+  console.log(totalAmount);
   let discountAmount = calculateButtonDiscount(totalAmount, buttonDiscount);
   let shippingCost = totalAmount < 200 ? 50 : 0;
   let tax = totalAmount * 0.05;

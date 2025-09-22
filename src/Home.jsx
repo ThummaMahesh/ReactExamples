@@ -142,7 +142,7 @@ const handleExplore = () =>{
                 alt="Dairy & Milk"
                 className="d-block mx-auto rounded"
                 style={{
-                  width: "100%", // 👈 control image width
+                  width: "80%", // 👈 control image width
                   maxHeight: "550px",
                   objectFit: "contain",
                 }}
@@ -162,7 +162,7 @@ const handleExplore = () =>{
                 alt="Drinks"
                 className="d-block mx-auto rounded"
                 style={{
-                  width: "100%",
+                  width: "80%",
                   maxHeight: "550px",
                   objectFit: "contain",
                 }}
@@ -182,7 +182,7 @@ const handleExplore = () =>{
                 alt="Ice Creams"
                 className="d-block mx-auto rounded"
                 style={{
-                  width: "100%",
+                  width: "80%",
                   maxHeight: "550px",
                   objectFit: "contain",
                 }}
@@ -202,7 +202,7 @@ const handleExplore = () =>{
                 alt="Fruits & Vegetables"
                 className="d-block mx-auto rounded"
                 style={{
-                  width: "100%",
+                  width: "80%",
                   maxHeight: "550px",
                   objectFit: "contain",
                 }}
@@ -222,7 +222,7 @@ const handleExplore = () =>{
                 alt="Snacks & Sweets"
                 className="d-block mx-auto rounded"
                 style={{
-                  width: "100%",
+                  width: "80%",
                   maxHeight: "550px",
                   objectFit: "contain",
                 }}
@@ -242,7 +242,7 @@ const handleExplore = () =>{
                 alt="Non-Veg"
                 className="d-block mx-auto rounded"
                 style={{
-                  width: "100%",
+                  width: "80%",
                   maxHeight: "550px",
                   objectFit: "contain",
                 }}
@@ -262,7 +262,7 @@ const handleExplore = () =>{
                 alt="Medicines"
                 className="d-block mx-auto rounded"
                 style={{
-                  width: "100%",
+                  width: "80%",
                   maxHeight: "550px",
                   objectFit: "contain",
                 }}
