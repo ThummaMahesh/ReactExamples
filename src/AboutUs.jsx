@@ -56,7 +56,7 @@ function AboutUs() {
       <div className="row g-4">
         <div className="col-md-4 text-center">
           <img
-            src="/carousel/freshmilk.jpg"
+            src="/Carousel/freshmilk.jpg"
             alt="Milk"
             className="img-fluid rounded shadow"
           />
@@ -67,7 +67,7 @@ function AboutUs() {
         </div>
         <div className="col-md-4 text-center">
           <img
-            src="/carousel/veg&fruits.jpg"
+            src="/Carousel/veg&fruits.jpg"
             alt="Vegetables"
             className="img-fluid rounded shadow"
           />
@@ -78,7 +78,7 @@ function AboutUs() {
         </div>
         <div className="col-md-4 text-center">
           <img
-            src="/carousel/snacks&sweets.jpg"
+            src="/Carousel/snacks&sweets.jpg"
             alt="Sweets"
             className="img-fluid rounded shadow"
           />
@@ -90,7 +90,7 @@ function AboutUs() {
         </div>
         <div className="col-md-6 text-center">
           <img
-            src="/carousel/nonveg.jpeg"
+            src="/Carousel/nonveg.jpeg"
             alt="Non-Veg"
             className="img-fluid rounded shadow"
           />
@@ -101,7 +101,7 @@ function AboutUs() {
         </div>
         <div className="col-md-6 text-center">
           <img
-            src="/carousel/medicine.jpg"
+            src="/Carousel/medicine.jpg"
             alt="Medicines"
             className="img-fluid rounded shadow"
           />
