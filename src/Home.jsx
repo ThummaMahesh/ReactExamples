@@ -22,7 +22,7 @@ import  { useState, useEffect } from "react";
 function Home() {
 
 const categoriesRef =useRef(null);
-const offerEndTime = new Date("2025-09-24T23:59:59").getTime();
+const offerEndTime = new Date("2025-09-29T23:59:59").getTime();
 
 const [timeLeft, setTimeLeft] = useState("");
 
